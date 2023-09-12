@@ -16,5 +16,6 @@ public class CustomerAppointmentRequest {
     private String phone;
     private String appointment;
     List<Product> productList;
+    private String ok;
 
 }
