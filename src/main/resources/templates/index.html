@@ -10,15 +10,22 @@
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
+    <!-- Tham chiếu tới tệp CSS và JavaScript của select2 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+            integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <!-- CSS của select2 -->
-<link href="path/to/select2.min.css" rel="stylesheet" />
+
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+
+
 
 <!-- JavaScript của jQuery -->
-<script src="path/to/jquery.min.js"></script>
 
-<!-- JavaScript của select2 -->
-<script src="path/to/select2.min.js"></script>
+
+
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -34,6 +41,18 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="../static/assets/user/css/style.css" rel="stylesheet">
+
+    <style>
+        .custom-select-style {
+            background-color: white;
+            border: 1px solid #aaa;
+            border-radius: 0px;
+            cursor: text;
+            padding-bottom: 21px;
+            padding-right: 5px;
+            position: relative;
+        }
+    </style>
 </head>
 
 <body>
@@ -42,9 +61,9 @@
         <div class="row py-2 px-lg-5">
             <div class="col-lg-6 text-left mb-2 mb-lg-0">
                 <div class="d-inline-flex align-items-center">
-                    <small><i class="fa fa-phone-alt mr-2"></i>+012 345 6789</small>
+                    <small><i class="fa fa-phone-alt mr-2"></i>+076 997 3715</small>
                     <small class="px-3">|</small>
-                    <small><i class="fa fa-envelope mr-2"></i>info@example.com</small>
+                    <small><i class="fa fa-envelope mr-2"></i>spa.beaty@gmail.com</small>
                 </div>
             </div>
             <div class="col-lg-6 text-right">
@@ -119,7 +138,7 @@
                         <div class="p-3" style="max-width: 900px;">
                             <h6 class="text-white text-uppercase mb-3 animate__animated animate__fadeInDown" style="letter-spacing: 3px;">Spa & Beauty Center</h6>
                             <h3 class="display-3 text-capitalize text-white mb-3">Massage Treatment</h3>
-                            <p class="mx-md-5 px-5">Lorem rebum magna dolore amet lorem eirmod magna erat diam stet. Sadips duo stet amet amet ndiam elitr ipsum labore diam</p>
+                            <h3 class="mx-md-5 px-5" style="color: white">Hòa mình vào cảm giác êm dịu</h3>
                             <a class="btn btn-outline-light py-3 px-4 mt-3 animate__animated animate__fadeInUp" href="#">Make Appointment</a>
                         </div>
                     </div>
@@ -290,15 +309,19 @@
                         <div class="form-row">
                             <div class="col-sm-6">
                                 <div class="form-group">
-                                    <select id="mySelect" class="custom-select bg-transparent px-4" style="height: 47px;">
-                                        <option selected>Select A Service</option>
-                                        <option value="1">Service 1</option>
-                                        <option value="2">Service 2</option>
-                                        <option value="3">Service 3</option>
+                                    <select id="mySelect" class="custom-select bg-transparent px-4 js-example-basic-multiple custom-select-style" multiple="multiple" style="height: 47px;padding-bottom: 21px !important; border-radius: 0px !important; " placeholder="Select Service">
+                                        <option value="1">Stone Therapy</option>
+                                        <option value="2">Facial Therapy</option>
+                                        <option value="3">Skin Care</option>
+                                        <option value="4">Steam Bath</option>
+                                        <option value="5">Face Masking</option>
+                                        <option value="6">Body Massage</option>
                                     </select>
                                 </div>
                             </div>
-                            <div class="col-sm-6">
+                        </div>
+                        <div class="form-row">
+                            <div class="col-sm-6 offset-sm-6">
                                 <button class="btn btn-primary btn-block" type="submit" style="height: 47px;">Make Appointment</button>
                             </div>
                         </div>
@@ -620,7 +643,7 @@
 
 
     <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<!--    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>-->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
     <script src="../static/assets/user/lib/easing/easing.min.js"></script>
     <script src="../static/assets/user/lib/waypoints/waypoints.min.js"></script>
@@ -638,9 +661,10 @@
     <script src="../static/assets/user/js/main.js"></script>
 
     <!-- select2 -->
+
     <script>
         $(document).ready(function() {
-            $('#mySelect').select2();
+            $('.js-example-basic-multiple').select2();
         });
     </script>
 </body>

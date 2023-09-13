@@ -1,6 +1,5 @@
 package com.example.spa_case.model;
 
-import com.example.spa_case.model.enums.EType;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import lombok.*;
@@ -24,14 +23,9 @@ public class Customer {
     @Email
     private String email;
 
-    @Enumerated
-    private EType type;
-
     @OneToMany(mappedBy = "customer")
     private List<Bill> bills;
 
-    @OneToMany(mappedBy = "customer")
-    private List<CustomerAppointment> customerAppointments;
 
 
 

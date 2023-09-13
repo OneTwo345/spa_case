@@ -1,24 +1,26 @@
 package com.example.spa_case.model;
 
+
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 @Entity
-@Table(name = "customer_appointments")
-@Data
+@AllArgsConstructor
 @NoArgsConstructor
-public class CustomerAppointment {
+@Data
+@Table(name = "packages")
+public class Package {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private String name;
+    private BigDecimal price;
 
-    @ManyToOne
-    private Customer customer;
-
-    @ManyToOne
-    private Appointment appointment;
-
+    @OneToMany(mappedBy = "package")
+    private List<Service> serviceList;
 }

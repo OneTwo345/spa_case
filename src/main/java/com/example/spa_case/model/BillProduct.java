@@ -15,11 +15,17 @@ public class BillProduct {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private String name;
+
+    private Integer quantity;
+
+    private BigDecimal price;
+
     @ManyToOne
     private Bill bill;
 
     @ManyToOne
-    private Product product;
+    private Service service;
 
 
 }

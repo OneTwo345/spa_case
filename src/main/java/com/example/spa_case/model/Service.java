@@ -3,6 +3,7 @@ package com.example.spa_case.model;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.io.File;
 import java.math.BigDecimal;
 import java.util.List;
 
@@ -10,8 +11,8 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@Table(name = "products")
-public class Product {
+@Table(name = "services")
+public class Service {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -22,12 +23,15 @@ public class Product {
 
     private String description;
 
+    private File Image;
 
-    @OneToMany(mappedBy = "product")
+
+    @OneToMany(mappedBy = "service")
     private List<BillProduct> billProducts;
 
+
     @ManyToOne
-    private Appointment appointment;
+    private Package aPackage;
 
 
 
