@@ -7,19 +7,18 @@ import lombok.NoArgsConstructor;
 import java.math.BigDecimal;
 
 @Entity
-@Table(name = "bill_products")
+@Table(name = "customer_appointments")
 @Data
 @NoArgsConstructor
-public class BillProduct {
+public class CustomerAppointment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @ManyToOne
-    private Bill bill;
+    private Customer customer;
 
     @ManyToOne
-    private Product product;
-
+    private Appointment appointment;
 
 }

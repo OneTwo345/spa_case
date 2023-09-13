@@ -32,9 +32,6 @@ public class CustomerRestController {
 
     @PutMapping("/{customerId}")
     public ResponseEntity<String> updateCustomer(@PathVariable("customerId") Long customerId, @RequestBody Customer customer) {
-        // Kiểm tra customerId tồn tại trong hệ thống (nếu cần)
-        // Nếu không tìm thấy customerId, trả về ResponseEntity.notFound().build()
-
         customerService.updateCustomer(customer);
         return ResponseEntity.ok("Customer updated successfully");
     }
@@ -47,6 +44,12 @@ public class CustomerRestController {
             return ResponseEntity.notFound().build();
         }
         return ResponseEntity.ok(customer);
+    }
+
+    @DeleteMapping("/{customerId}")
+    public ResponseEntity<String> deleteCustomer(@PathVariable Long customerId) {
+        customerService.deleteCustomer(customerId);
+        return ResponseEntity.ok("Khách hàng đã được xóa thành công.");
     }
 
 }

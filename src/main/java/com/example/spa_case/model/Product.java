@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 @Entity
 @AllArgsConstructor
@@ -20,6 +21,10 @@ public class Product {
     private BigDecimal price;
 
     private String description;
+
+
+    @OneToMany(mappedBy = "product")
+    private List<BillProduct> billProducts;
 
 
 
