@@ -1,4 +1,4 @@
-package com.example.spa_case.dto.request;
+package com.example.spa_case.service.dto.request;
 
 import com.example.spa_case.model.Product;
 import lombok.AllArgsConstructor;
@@ -10,7 +10,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class CustomerAppointmentRequest {
+public class AppointmentRequest {
     private String name;
     private String email;
     private String phone;

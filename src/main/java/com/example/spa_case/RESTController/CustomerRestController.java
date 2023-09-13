@@ -1,4 +1,4 @@
-package com.example.spa_case.controller;
+package com.example.spa_case.RESTController;
 
 import com.example.spa_case.model.Customer;
 import com.example.spa_case.service.CustomerService;
@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/customers")
+@RequestMapping("/api/customers")
 @AllArgsConstructor
 public class CustomerRestController {
 

@@ -23,5 +23,8 @@ public class Appointment {
     @OneToMany(mappedBy = "appointment")
     private List<CustomerAppointment> customerAppointments;
 
+    @OneToMany(mappedBy = "appointment")
+    private List<Product> product;
+
 
 }
