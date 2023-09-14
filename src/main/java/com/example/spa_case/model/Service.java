@@ -2,6 +2,7 @@ package com.example.spa_case.model;
 
 import jakarta.persistence.*;
 import lombok.*;
+import java.util.List;
 
 import java.math.BigDecimal;
 
@@ -9,8 +10,8 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@Table(name = "products")
-public class Product {
+@Table(name = "services")
+public class Service {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -21,7 +22,13 @@ public class Product {
 
     private String description;
 
+    @OneToMany(mappedBy = "service")
+    private List<Image> images;
 
+    @OneToMany(mappedBy = "service")
+    private List<ComboService> comboServices;
 
+    @OneToMany(mappedBy = "service")
+    private List<BillService> billServices;
 
 }

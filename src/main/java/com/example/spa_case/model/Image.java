@@ -1,31 +1,21 @@
 package com.example.spa_case.model;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.math.BigDecimal;
-
 @Entity
-@Table(name = "bill_products")
 @Data
+@AllArgsConstructor
 @NoArgsConstructor
-public class BillProduct {
+public class Image {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    private String productName;
-
-    private BigDecimal price;
-
-    private Integer productQuantity;
-
+    private String name;
     @ManyToOne
-    private Bill bill;
-
+    private Service service;
     @ManyToOne
-    private Customer customer;
-
-
+    private Combo combo;
 }
