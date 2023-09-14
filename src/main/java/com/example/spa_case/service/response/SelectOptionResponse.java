@@ -1,4 +1,4 @@
-package com.example.spa_case.dto.response;
+package com.example.spa_case.service.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

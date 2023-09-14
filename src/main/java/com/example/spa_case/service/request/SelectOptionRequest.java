@@ -1,4 +1,4 @@
-package com.example.spa_case.dto.request;
+package com.example.spa_case.service.request;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
