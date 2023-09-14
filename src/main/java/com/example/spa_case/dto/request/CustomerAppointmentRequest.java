@@ -1,6 +1,6 @@
 package com.example.spa_case.dto.request;
 
-import com.example.spa_case.model.Product;
+import com.example.spa_case.model.Service;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,7 +15,7 @@ public class CustomerAppointmentRequest {
     private String email;
     private String phone;
     private String appointment;
-    List<Product> productList;
+    List<Service> productList;
     private String ok;
 
 }
