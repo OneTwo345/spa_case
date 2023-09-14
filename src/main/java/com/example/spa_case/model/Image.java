@@ -5,26 +5,21 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDateTime;
-
 @Entity
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
-@Table(name = "users")
-public class User {
+@Table(name = "images")
+public class Image {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String name;
 
-    private String email;
+    @ManyToOne
+    private Service service;
 
-
-    private String passWord;
-
-    private String phone;
-
-    private LocalDateTime dob;
+    @ManyToOne
+    private Combo combo;
 }

@@ -1,5 +1,6 @@
 package com.example.spa_case.service.dto.request;
 
+import com.example.spa_case.model.Service;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

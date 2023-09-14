@@ -2,9 +2,12 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <th:block th:replace="~{layout.html :: header}"></th:block>
 <div class="container">
-    <button style="background-color: #EA9797; color: beige" type="button" class="btn  mt-4 " data-bs-toggle="modal" data-bs-target="#staticBackdrop" id="create">
+
+    <button style="background-color: #ea9797; color: beige" type="button" class="btn  mt-4 " data-bs-toggle="modal" data-bs-target="#staticBackdrop" id="create">
         Create Service
     </button>
+
+
     <div class="input-group">
         <label for="priceRange"></label><select class="form-control" id="priceRange">
         <option value="0-50000000000" selected>----Choose----</option>

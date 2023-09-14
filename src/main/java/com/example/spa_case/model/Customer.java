@@ -1,7 +1,8 @@
 package com.example.spa_case.model;
 
+
+import com.example.spa_case.model.enums.EStatusCustomer;
 import jakarta.persistence.*;
-import jakarta.validation.constraints.Email;
 import lombok.*;
 
 import java.util.List;
@@ -23,7 +24,8 @@ public class Customer {
     private String email;
 
 
-    private EType type;
+    private EStatusCustomer type;
+
 
     @OneToMany(mappedBy = "customer")
     private List<Bill> bills;
