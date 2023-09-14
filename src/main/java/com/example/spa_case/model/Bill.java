@@ -3,6 +3,7 @@ package com.example.spa_case.model;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -22,13 +23,19 @@ public class Bill {
 
     private String customerEmail;
 
-    private Integer customerQuantity;
+    private Long customerQuantity;
 
-    private LocalDateTime appointment;
+    private LocalDateTime timeBook;
+
+    private LocalDateTime appointmentTime;
+
+    private BigDecimal price;
 
     @OneToMany(mappedBy = "bill")
     private List<BillService> billServices;
 
+    @OneToMany(mappedBy = "bill")
+    private List<BillCombo> billCombos;
     @ManyToOne
     private Customer customer;
 

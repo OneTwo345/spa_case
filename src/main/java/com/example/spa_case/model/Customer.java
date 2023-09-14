@@ -20,15 +20,15 @@ public class Customer {
 
     private String phone;
 
-    @Email
     private String email;
+
+
+    private EType type;
 
     @OneToMany(mappedBy = "customer")
     private List<Bill> bills;
 
-
-
-
-
+    @OneToOne(fetch = FetchType.LAZY)
+    private User user;
 
 }

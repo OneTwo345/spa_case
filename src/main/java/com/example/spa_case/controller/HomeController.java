@@ -7,62 +7,29 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-@RequestMapping("/")
 @AllArgsConstructor
+@RequestMapping(value="/")
 public class HomeController {
-    @GetMapping("index.html")
-    public ModelAndView index() {
-        ModelAndView view = new ModelAndView("index");
-
-        return view;
+    @GetMapping("/dashboard")
+    public ModelAndView home() {
+        return new ModelAndView("/dashboard");
     }
-    @GetMapping("about.html")
-    public ModelAndView about() {
-        ModelAndView view = new ModelAndView("about");
-
-        return view;
-    }
-    @GetMapping("appointment.html")
-    public ModelAndView appointment() {
-        ModelAndView view = new ModelAndView("appointment");
-
-        return view;
-    }
-    @GetMapping("contact.html")
-    public ModelAndView contact() {
-        ModelAndView view = new ModelAndView("contact");
-
-        return view;
+    @GetMapping("/user")
+    public ModelAndView user() {
+        return new ModelAndView("/user");
     }
 
-    @GetMapping("opening.html")
-    public ModelAndView opening() {
-        ModelAndView view = new ModelAndView("opening");
-
-        return view;
+    @GetMapping("/service")
+    public ModelAndView product() {
+        return new ModelAndView("/service");
     }
-    @GetMapping("price.html")
-    public ModelAndView price() {
-        ModelAndView view = new ModelAndView("price");
 
-        return view;
+    @GetMapping("/combo")
+    public ModelAndView combo() {
+        return new ModelAndView("/combo");
     }
-    @GetMapping("service.html")
-    public ModelAndView service() {
-        ModelAndView view = new ModelAndView("service");
-
-        return view;
-    }
-    @GetMapping("team.html")
-    public ModelAndView team() {
-        ModelAndView view = new ModelAndView("team");
-
-        return view;
-    }
-    @GetMapping("testimonial.html")
-    public ModelAndView testimonial() {
-        ModelAndView view = new ModelAndView("testimonial");
-
-        return view;
+    @GetMapping("/bill")
+    public ModelAndView bill() {
+        return new ModelAndView("/bill");
     }
 }
