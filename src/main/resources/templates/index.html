@@ -319,6 +319,12 @@
                                     </select>
                                 </div>
                             </div>
+
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control bg-transparent p-4" placeholder="Your Phone" required="required" />
+                                </div>
+                            </div>
                         </div>
                         <div class="form-row">
                             <div class="col-sm-6 offset-sm-6">
@@ -663,8 +669,16 @@
     <!-- select2 -->
 
     <script>
+
+
         $(document).ready(function() {
             $('.js-example-basic-multiple').select2();
+            const select = document.getElementsByClassName('select2-selection select2-selection--multiple')[0].style;
+            select.borderRadius = '0';
+            select.background ='transparent';
+            select.paddingBottom = '23px';
+            select.placeholder = "Select Service";
+
         });
     </script>
 </body>

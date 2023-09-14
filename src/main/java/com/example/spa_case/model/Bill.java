@@ -27,7 +27,7 @@ public class Bill {
     private LocalDateTime appointment;
 
     @OneToMany(mappedBy = "bill")
-    private List<BillProduct> billProducts;
+    private List<BillService> billServices;
 
     @ManyToOne
     private Customer customer;

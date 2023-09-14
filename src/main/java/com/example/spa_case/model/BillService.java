@@ -7,10 +7,10 @@ import lombok.NoArgsConstructor;
 import java.math.BigDecimal;
 
 @Entity
-@Table(name = "bill_products")
+@Table(name = "bill_services")
 @Data
 @NoArgsConstructor
-public class BillProduct {
+public class BillService {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

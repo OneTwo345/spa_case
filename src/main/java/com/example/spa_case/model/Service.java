@@ -27,11 +27,10 @@ public class Service {
 
 
     @OneToMany(mappedBy = "service")
-    private List<BillProduct> billProducts;
+    private List<BillService> billServices;
 
 
-    @ManyToOne
-    private Package aPackage;
+
 
 
 
