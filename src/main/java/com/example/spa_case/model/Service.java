@@ -21,6 +21,10 @@ public class Service {
     private BigDecimal price;
 
     private String description;
+    //new Image set Poster
+    // new List Image set images;
+    @ManyToOne
+    private Image poster;
 
     @OneToMany(mappedBy = "service")
     private List<Image> images;
