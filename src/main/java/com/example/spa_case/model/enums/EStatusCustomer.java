@@ -1,7 +1,5 @@
 package com.example.spa_case.model.enums;
 
-import jakarta.persistence.Enumerated;
-
-public enum EType {
+public enum EStatusCustomer {
     VIP, BASIC, FAMILY
 }
