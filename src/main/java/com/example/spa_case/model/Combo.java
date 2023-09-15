@@ -1,5 +1,7 @@
 package com.example.spa_case.model;
 
+
+
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -22,12 +24,8 @@ public class Combo {
 
     private BigDecimal price;
 
-    @ManyToOne
-    private Image poster;
-
-
     @OneToMany(mappedBy = "combo")
-    private List<ComboProduct> comboProducts;
+    private List<ComboService> comboServices;
 
     @OneToMany(mappedBy = "combo")
     private List<BillCombo> billCombos;

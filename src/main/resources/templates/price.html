@@ -19,12 +19,12 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="../static/assets/user/lib/animate/animate.min.css" rel="stylesheet">
-    <link href="../static/assets/user/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="../static/assets/user/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="../static/assets/user/css/style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -33,9 +33,9 @@
         <div class="row py-2 px-lg-5">
             <div class="col-lg-6 text-left mb-2 mb-lg-0">
                 <div class="d-inline-flex align-items-center">
-                    <small><i class="fa fa-phone-alt mr-2"></i>+076 997 3715</small>
+                    <small><i class="fa fa-phone-alt mr-2"></i>+012 345 6789</small>
                     <small class="px-3">|</small>
-                    <small><i class="fa fa-envelope mr-2"></i>spa.beaty@gmail.com</small>
+                    <small><i class="fa fa-envelope mr-2"></i>info@example.com</small>
                 </div>
             </div>
             <div class="col-lg-6 text-right">
@@ -65,7 +65,7 @@
     <!-- Navbar Start -->
     <div class="container-fluid p-0">
         <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 px-lg-5">
-            <a href="index.html" class="navbar-brand ml-lg-3">
+            <a href="/home" class="navbar-brand ml-lg-3">
                 <h1 class="m-0 text-primary"><span class="text-dark">SPA</span> Center</h1>
             </a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
@@ -73,22 +73,31 @@
             </button>
             <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
                 <div class="navbar-nav m-auto py-0">
-                    <a href="index.html" class="nav-item nav-link">Home</a>
-                    <a href="about.html" class="nav-item nav-link">About</a>
-                    <a href="service.html" class="nav-item nav-link">Services</a>
-                    <a href="price.html" class="nav-item nav-link active">Pricing</a>
+                    <a href="/home" class="nav-item nav-link">Home</a>
+                    <a href="/about" class="nav-item nav-link">About</a>
+                    <a href="/service" class="nav-item nav-link">Services</a>
+                    <a href="/price" class="nav-item nav-link active">Pricing</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
                         <div class="dropdown-menu rounded-0 m-0">
-                            <a href="appointment.html" class="dropdown-item">Appointment</a>
-                            <a href="opening.html" class="dropdown-item">Open Hours</a>
-                            <a href="team.html" class="dropdown-item">Our Team</a>
-                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                            <a href="/appointment" class="dropdown-item">Appointment</a>
+                            <a href="/opening" class="dropdown-item">Open Hours</a>
+                            <a href="/team" class="dropdown-item">Our Team</a>
+                            <a href="/testimonial" class="dropdown-item">Testimonial</a>
                         </div>
                     </div>
-                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    <a href="/contact" class="nav-item nav-link">Contact</a>
                 </div>
-                <a href="" class="btn btn-primary d-none d-lg-block">Book Now</a>
+                <div>
+                    <form class="d-flex">
+                        <div class="right-items">
+                            <a href="/login" class="btn btn-primary d-none d-lg-block">Login</a>
+                        </div>
+                        <div>
+                            <a href="" class="btn btn-primary d-none d-lg-block">Book Now</a>
+                        </div>
+                    </form>
+                </div>
             </div>
         </nav>
     </div>
@@ -115,7 +124,7 @@
             <div class="row">
                 <div class="col-lg-5" style="min-height: 500px;">
                     <div class="position-relative h-100">
-                        <img class="position-absolute w-100 h-100" src="../static/assets/user/img/pricing.jpg" style="object-fit: cover;">
+                        <img class="position-absolute w-100 h-100" src="img/pricing.jpg" style="object-fit: cover;">
                     </div>
                 </div>
                 <div class="col-lg-7 pt-5 pb-lg-5">
@@ -184,7 +193,7 @@
             <div class="row">
                 <div class="col-lg-6" style="min-height: 500px;">
                     <div class="position-relative h-100">
-                        <img class="position-absolute w-100 h-100" src="../static/assets/user/img/opening.jpg" style="object-fit: cover;">
+                        <img class="position-absolute w-100 h-100" src="img/opening.jpg" style="object-fit: cover;">
                     </div>
                 </div>
                 <div class="col-lg-6 pt-5 pb-lg-5">
@@ -285,20 +294,20 @@
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="../static/assets/user/lib/easing/easing.min.js"></script>
-    <script src="../static/assets/user/lib/waypoints/waypoints.min.js"></script>
-    <script src="../static/assets/user/lib/counterup/counterup.min.js"></script>
-    <script src="../static/assets/user/lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="../static/assets/user/lib/tempusdominus/js/moment.min.js"></script>
-    <script src="../static/assets/user/lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="../static/assets/user/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
     <!-- Contact Javascript File -->
-    <script src="../static/assets/user/mail/jqBootstrapValidation.min.js"></script>
-    <script src="../static/assets/user/mail/contact.js"></script>
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
 
     <!-- Template Javascript -->
-    <script src="../static/assets/user/js/main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

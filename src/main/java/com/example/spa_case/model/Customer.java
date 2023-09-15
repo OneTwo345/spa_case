@@ -1,32 +1,33 @@
 package com.example.spa_case.model;
 
-
-import com.example.spa_case.model.enums.EStatusCustomer;
+import com.example.spa_case.model.enums.EType;
 import jakarta.persistence.*;
-import lombok.*;
+import jakarta.validation.constraints.Email;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
+@Table(name = "customers")
 @Entity
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "customers")
 public class Customer {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String name;
 
-    private String phone;
+    private String Phone;
 
-    private EStatusCustomer type;
+    @Email
+    private String email;
+
+    @Enumerated
+    private EType type;
 
     @OneToMany(mappedBy = "customer")
     private List<Bill> bills;
-
-    @OneToOne(fetch = FetchType.LAZY)
-    private User user;
-
 }

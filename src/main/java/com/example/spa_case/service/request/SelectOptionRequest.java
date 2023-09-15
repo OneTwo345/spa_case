@@ -1,6 +1,5 @@
 package com.example.spa_case.service.request;
 
-
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
