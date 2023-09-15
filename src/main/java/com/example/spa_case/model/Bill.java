@@ -1,11 +1,15 @@
 package com.example.spa_case.model;
 
 import jakarta.persistence.*;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.time.LocalDateTime;
+import java.util.List;
+
 import lombok.*;
 
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
-import java.util.List;
 
 @Entity
 @AllArgsConstructor
@@ -32,7 +36,7 @@ public class Bill {
     private BigDecimal price;
 
     @OneToMany(mappedBy = "bill")
-    private List<BillProduct> billProducts;
+    private List<BillService> billServices;
 
     @OneToMany(mappedBy = "bill")
     private List<BillCombo> billCombos;

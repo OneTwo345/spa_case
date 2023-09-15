@@ -230,26 +230,16 @@ function renderItemStr(item) {
                         ${item.id}
                     </td>
                     <td>
-                        ${item.title}
-                    </td>
-                    <td>
-                        ${item.description}
-                    </td>
-                    <td>
-                        ${item.publishDate}
+                        ${item.Name}
                     </td>
                     <td>
                         ${formatCurrency(item.price)}
                     </td>
                     <td>
-                        ${item.authors}
-                    </td>
-                    
-                    <td>
-                        ${item.categories}
+                        ${item.description}
                     </td>
                     <td>
-                        ${item.status}
+                        ${item.image}
                     </td>
                      <td>
             <a class="btn edit" data-id="${item.id}" onclick="onShowEdit(${item.id})">
@@ -276,9 +266,9 @@ $(document).ready(function() {
 function getDataInput() {
     return [
         {
-            label: 'Title',
-            name: 'title',
-            value: roomSelected.title,
+            label: 'Name',
+            name: 'name',
+            value: roomSelected.name,
             required: true,
             pattern: "^[A-Za-z ]{6,20}",
             message: "Username must have minimum is 6 characters and maximum is 20 characters",

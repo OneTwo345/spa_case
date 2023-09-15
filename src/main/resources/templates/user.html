@@ -2,8 +2,9 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <th:block th:replace="~{layout.html :: header}"></th:block>
 <div class="container">
-    <button style="background-color: #ea9797; color: beige" type="button" class="btn  mt-4 " data-bs-toggle="modal" data-bs-target="#staticBackdrop" id="create">
-        Create User
+    <button type="button" class="btn btn-primary mt-4" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+            id="create">
+        Create Room
     </button>
     <div class="input-group">
         <label for="priceRange"></label><select class="form-control" id="priceRange">
@@ -15,8 +16,6 @@
         </select>
 
     </div>
-
-
 
     <!-- Modal -->
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
@@ -57,7 +56,7 @@
         <table class="table table-bordered table-striped">
             <tr>
                 <th>No</th>
-                <th style="width: 250px">Title</th>
+                <th style="width: 250px">Name</th>
                 <th style="width: 250px">Description</th>
                 <th style="width: 250px">Publish Date</th>
                 <th id="price-check" class="arrow arrow-up" style="width: 100px">
