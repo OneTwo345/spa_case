@@ -6,7 +6,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.awt.*;
 import java.math.BigDecimal;
 
 import java.util.List;
@@ -15,8 +14,8 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@Table(name = "services")
-public class Service {
+@Table(name = "products")
+public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -32,13 +31,13 @@ public class Service {
     @ManyToOne
     private Image poster;
 
-    @OneToMany(mappedBy = "service")
+    @OneToMany(mappedBy = "product")
     private List<Image> images;
 
-    @OneToMany(mappedBy = "service")
-    private List<ComboService> comboServices;
+    @OneToMany(mappedBy = "product")
+    private List<ComboProduct> comboProducts;
 
-    @OneToMany(mappedBy = "service")
-    private List<BillService> billServices;
+    @OneToMany(mappedBy = "product")
+    private List<BillProduct> billProducts;
 
 }

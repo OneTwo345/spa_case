@@ -21,11 +21,7 @@ public class Customer {
 
     private String phone;
 
-    private String email;
-
-
     private EStatusCustomer type;
-
 
     @OneToMany(mappedBy = "customer")
     private List<Bill> bills;

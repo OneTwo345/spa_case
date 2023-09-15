@@ -10,21 +10,21 @@ import java.math.BigDecimal;
 @Table(name = "bill_services")
 @Data
 @NoArgsConstructor
-public class BillService {
+public class BillProduct {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String serviceName;
+    private String productName;
 
     private BigDecimal price;
 
-    private Long serviceQuantity;
+    private Long productQuantity;
 
 
     @ManyToOne
     private Bill bill;
     @ManyToOne
-    private Service service;
+    private Product product;
 
 }

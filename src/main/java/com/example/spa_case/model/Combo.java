@@ -5,7 +5,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.awt.*;
 import java.math.BigDecimal;
 import java.util.List;
 
@@ -28,7 +27,7 @@ public class Combo {
 
 
     @OneToMany(mappedBy = "combo")
-    private List<ComboService> comboServices;
+    private List<ComboProduct> comboProducts;
 
     @OneToMany(mappedBy = "combo")
     private List<BillCombo> billCombos;

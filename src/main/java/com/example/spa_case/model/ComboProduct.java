@@ -11,13 +11,13 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@Table(name = "comboServices")
-public class ComboService {
+@Table(name = "comboProduct")
+public class ComboProduct {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String serviceName;
+    private String productName;
 
     private BigDecimal price;
 
@@ -25,5 +25,5 @@ public class ComboService {
     private Combo combo;
 
     @ManyToOne
-    private Service service;
+    private Product product;
 }

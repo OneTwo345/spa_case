@@ -18,7 +18,7 @@ public class Image {
     private String name;
 
     @ManyToOne
-    private Service service;
+    private Product product;
 
     @ManyToOne
     private Combo combo;
