@@ -9,13 +9,17 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name = "images")
 public class Image {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
+
     @ManyToOne
-    private Service service;
+    private Product product;
+
     @ManyToOne
     private Combo combo;
 }

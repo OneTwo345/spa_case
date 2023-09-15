@@ -2,6 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <th:block th:replace="~{layout.html :: header}"></th:block>
 <div class="container">
+
     <button style="background-color: #ea9797; color: beige" type="button" class="btn  mt-4 " data-bs-toggle="modal" data-bs-target="#staticBackdrop" id="create">
         Create Service
     </button>
@@ -11,15 +12,11 @@
         <label for="priceRange"></label><select class="form-control" id="priceRange">
         <option value="0-50000000000" selected>----Choose----</option>
         <option value="0-100">Dưới 100 đồng</option>
-            <option value="100-500">Từ 100 đến 500 đồng</option>
-            <option value="501-1000">Từ 501 đến 1000 đồng</option>
-            <option value="1001-2000">Từ 1001 đến 2000 đồng</option>
-        </select>
-
+        <option value="100-500">Từ 100 đến 500 đồng</option>
+        <option value="501-1000">Từ 501 đến 1000 đồng</option>
+        <option value="1001-2000">Từ 1001 đến 2000 đồng</option>
+    </select>
     </div>
-
-
-
     <!-- Modal -->
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
          aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -33,7 +30,6 @@
                     <form id="roomForm">
                         <div class="row">
                             <div id="formBody">
-
                             </div>
                             <div class="form-group col-12">
                                 <label for="authors">Authors</label>
@@ -76,13 +72,11 @@
         <div class="d-flex justify-content-end">
             <nav aria-label="...">
                 <ul class="pagination" id="pagination">
-
                 </ul>
             </nav>
         </div>
     </div>
 </div>
-
 <th:block th:replace="~{layout.html :: footer}"></th:block>
 <script src="/assets/myjs/room.js"></script>
 <script>
@@ -92,5 +86,4 @@
     }
     document.getElementById("menu-service").classList.add("active");
 </script>
-
 </html>

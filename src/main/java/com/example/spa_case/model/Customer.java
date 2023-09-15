@@ -1,5 +1,6 @@
 package com.example.spa_case.model;
 
+
 import com.example.spa_case.model.enums.EStatusCustomer;
 import jakarta.persistence.*;
 import lombok.*;
@@ -20,8 +21,6 @@ public class Customer {
 
     private String phone;
 
-    private String email;
-
     private EStatusCustomer type;
 
     @OneToMany(mappedBy = "customer")
@@ -29,4 +28,5 @@ public class Customer {
 
     @OneToOne(fetch = FetchType.LAZY)
     private User user;
+
 }

@@ -32,7 +32,7 @@ public class Bill {
     private BigDecimal price;
 
     @OneToMany(mappedBy = "bill")
-    private List<BillService> billServices;
+    private List<BillProduct> billProducts;
 
     @OneToMany(mappedBy = "bill")
     private List<BillCombo> billCombos;

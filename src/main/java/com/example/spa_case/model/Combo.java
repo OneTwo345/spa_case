@@ -22,8 +22,12 @@ public class Combo {
 
     private BigDecimal price;
 
+    @ManyToOne
+    private Image poster;
+
+
     @OneToMany(mappedBy = "combo")
-    private List<ComboService> comboServices;
+    private List<ComboProduct> comboProducts;
 
     @OneToMany(mappedBy = "combo")
     private List<BillCombo> billCombos;
